@@ -191,7 +191,7 @@ class SettlementLine(models.Model):
         total_sales = self.settelment_id.total_sales
         agent_goal = self.settelment_id.agent_id.sales_goal
         company_goal = self.env.company.sales_goal
-        if float_compare(total_sales, company_goal, precision_digits=2) >= 0 or if float_compare(total_sales, agent_goal, precision_digits=2) >= 0::
+        if float_compare(total_sales, company_goal, precision_digits=2) >= 0 or float_compare(total_sales, agent_goal, precision_digits=2) >= 0:
             percentage = 1
         else:
             percentage_archived = (total_sales * 100) / agent_goal

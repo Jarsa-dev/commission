@@ -52,6 +52,11 @@ class ResPartner(models.Model):
         inverse_name="agent_id",
         readonly=True,
     )
+    sales_goal = fields.Monetary(
+        string='Sales Goal',
+        store=True,
+        help='Transactional sales goal',
+    )
 
     @api.model
     def _commercial_fields(self):
